@@ -103,7 +103,7 @@ class HapticCollider : MonoBehaviour
             {
                 HPlugin.UpdateCollision(collision, true, false, false);
                 //GControl.GrabberCollision(collision, gameObject);
-                HPlugin.enable_damping = true;
+                //HPlugin.enable_damping = true;
             }
         }
 

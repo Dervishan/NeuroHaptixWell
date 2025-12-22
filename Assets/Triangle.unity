@@ -814,6 +814,57 @@ Transform:
   - {fileID: 708807576}
   m_Father: {fileID: 1691949686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &327387885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327387887}
+  - component: {fileID: 327387886}
+  m_Layer: 0
+  m_Name: SceneToggler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &327387886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327387885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ae47a48a0031843b8b23bc5897a800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAlternateScenes: 0
+  defaultSceneA: Circle
+  defaultSceneB: Triangle
+  defaultSceneC: Star
+  alternateSceneA: CircleHaptic
+  alternateSceneB: TriangleHaptic
+  alternateSceneC: StarHaptic
+--- !u!4 &327387887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327387885}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408211920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,8 +1073,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582486300}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0.2}
+  m_LocalRotation: {x: 0, y: 0.9990483, z: 0.043619405, w: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1093,11 +1144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37e42ffc804aaef47a06e2571b491922, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.057
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37e42ffc804aaef47a06e2571b491922, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0783
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37e42ffc804aaef47a06e2571b491922, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1182,8 +1233,8 @@ MonoBehaviour:
   hDamping: 0
   hImpulseD: 0
   hViscosity: 0
-  hFrictionS: 0.501
-  hFrictionD: 0.32
+  hFrictionS: 0.5
+  hFrictionD: 0.3
   hConstForceDir: {x: 0, y: 0, z: 0}
   hConstForceMag: 0
   UseContactNormalCF: 0
@@ -1339,9 +1390,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f72356eabf3d20439417b5a448552a0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2f72356eabf3d20439417b5a448552a0, type: 3}
       propertyPath: m_Name
       value: SimpleStylus
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f72356eabf3d20439417b5a448552a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1491,7 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a683f788063a4fb93875fccc74779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hStiffness: 1
+  hStiffness: 0
   hFrictionS: 0
   hFrictionD: 0
 --- !u!54 &1201052830
@@ -1680,121 +1739,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 32.703, y: -157.546, z: -143.555}
---- !u!1 &1621684137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1621684141}
-  - component: {fileID: 1621684140}
-  - component: {fileID: 1621684139}
-  - component: {fileID: 1621684138}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1621684138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621684137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a988ba3a2590d1f4792c08e5287f6525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Title: Haptics Direct for Unity
-  m_Description: "Welcome to Haptics Direct Plug-in for Unity                                  
-    \r\n\r\nHere are some helpful tips before you start the demo.\r\nAlways keep
-    the stylus in your hand! \r\n\r\nNavigation:\r\nPress the \"T\" Key to enable/disable
-    the navigation. By moving the stylus to the left or right side you can\r move
-    to the next or previous demo section.\r\n\r\nPress the \"C\" Key to center the
-    demo section.\r\n\r\nTo quickly navigate to the next section simply swipe the
-    stylus to the left or right with a flick of the wrist. \r\n\r\nPress ESC to quit
-    the demo.\n\n\n\n\n\n"
-  mShowingHelpWindow: 1
---- !u!81 &1621684139
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621684137}
-  m_Enabled: 1
---- !u!20 &1621684140
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621684137}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.20162867, g: 0.20759907, b: 0.21698111, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.1
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1621684141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621684137}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9914449, z: -0.13052616, w: 0}
-  m_LocalPosition: {x: 0, y: 0.071, z: 0.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15, y: 180, z: 0}
 --- !u!1 &1649450491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,113 +2476,6 @@ Transform:
   - {fileID: 261530040}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1693311442
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1693311445}
-  - component: {fileID: 1693311444}
-  - component: {fileID: 1693311443}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1693311443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693311442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37cfbba176358e34d921755ce10e3e72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPlugin: {fileID: 408211921}
-  VelocityActivation: 700
-  VelControl: 0
-  Stylus1: {fileID: 0}
-  Stylus2: {fileID: 0}
-  GestureEvents:
-    OnSwipeLeft:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1693311443}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: MoveLeft
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnSwipeRight:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1693311443}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: MoveRight
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1693311444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693311442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2959e9c887b69484398692dbfe56bae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPlugin: {fileID: 408211921}
-  DeviceInfo: {fileID: 0}
-  Device1: {fileID: 0}
-  Device2: {fileID: 0}
-  StageBorders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!4 &1693311445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693311442}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4625429, y: 0.8766916, z: -0.05698073}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713550653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,6 +2678,55 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1948486233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948486235}
+  - component: {fileID: 1948486234}
+  m_Layer: 0
+  m_Name: Logger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1948486234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948486233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c2525a4ca86b4c83e312f50dcc4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  device0:
+    deviceLabel: device
+    plugin: {fileID: 408211921}
+  subfolder: HapticLogs
+  flushEveryNLines: 256
+--- !u!4 &1948486235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948486233}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971671810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,12 +2814,12 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1621684141}
   - {fileID: 1582071779}
-  - {fileID: 1693311445}
   - {fileID: 1691949686}
   - {fileID: 1201052833}
   - {fileID: 408211922}
   - {fileID: 755851114}
   - {fileID: 582486303}
   - {fileID: 1649450493}
+  - {fileID: 1948486235}
+  - {fileID: 327387887}

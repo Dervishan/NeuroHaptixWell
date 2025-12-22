@@ -4,5 +4,25 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Circle.unity
+    guid: c134332681197484aa70d98125dc2f7e
+  - enabled: 1
+    path: Assets/Star.unity
+    guid: 83eaf07ea61fd194a90a1633649c44f4
+  - enabled: 1
+    path: Assets/Triangle.unity
+    guid: 8d06a9fc538f2cf4fb9231b8bb48fc5e
+  - enabled: 1
+    path: Assets/CircleHaptic.unity
+    guid: 35601d0231c3b6c4a988136fcfd6fcbc
+  - enabled: 1
+    path: Assets/StarHaptic.unity
+    guid: 3415dffce0d23fa459c869fc23d35495
+  - enabled: 1
+    path: Assets/TriangleHaptic.unity
+    guid: 826c4d56f3ebbeb428c7676607a73660
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1221e8b9968adcf4288bb49c1b052285, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 34046f569b2f4e44ba511fa72fd82d90, type: 2}

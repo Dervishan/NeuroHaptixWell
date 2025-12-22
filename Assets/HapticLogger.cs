@@ -12,6 +12,9 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEditor.SearchService;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public sealed class PegTransferHapticLogger3DS : MonoBehaviour
 {
@@ -76,7 +79,7 @@ public sealed class PegTransferHapticLogger3DS : MonoBehaviour
 
         Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, subfolder));
 
-        for (int i = 0; i < _devices.Length; i++)
+        for (int i = 0; i < 1; i++)
             InitDeviceWriter(_devices[i], i);
     }
 
@@ -207,7 +210,7 @@ public sealed class PegTransferHapticLogger3DS : MonoBehaviour
         d.writerRun = 1;
 
         string dir = Path.Combine(Application.persistentDataPath, subfolder);
-        string filename = $"{_sessionStamp}_{d.deviceLabel}_idx{index}.csv";
+        string filename = $"{SceneManager.GetActiveScene().name}_{_sessionStamp}_{d.deviceLabel}_idx{index}.csv";
         d.filepath = Path.Combine(dir, filename);
 
         d.writer = new StreamWriter(d.filepath, append: false, encoding: new UTF8Encoding(false), bufferSize: 1 << 16);

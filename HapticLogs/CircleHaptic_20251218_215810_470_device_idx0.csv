@@ -1,0 +1,2 @@
+system_time_ns,unity_realtime_s,pos_mm_x,pos_mm_y,pos_mm_z,rot_q_x,rot_q_y,rot_q_z,rot_q_w,joint_rad_0,joint_rad_1,joint_rad_2,gimbal_rad_0,gimbal_rad_1,gimbal_rad_2,force_N_x,force_N_y,force_N_z,is_holding,held_ring_id,event_code,fps,dt_frame_s
+215857300,9.768299700008356,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,-1,0,0,0

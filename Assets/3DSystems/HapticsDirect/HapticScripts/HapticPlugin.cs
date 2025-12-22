@@ -2092,7 +2092,7 @@ public class HapticPlugin : MonoBehaviour
         //Debug.Log("Number of Collision Points:" + counter);
         updateContactPointInfo(DeviceIdentifier);
         //Vector3 anPos = gameObject.transform.InverseTransformPoint(CollisionMesh.transform.position);
-        Vector3 anPos = this.transform.InverseTransformPoint(VisualizationMesh.transform.position) / ScaleFactor;
+        Vector3 anPos = this.transform.InverseTransformPoint(CollisionMesh.transform.position) / ScaleFactor;
         setAnchorPosition(DeviceIdentifier, Vector3ToDoubleArray(anPos));
         //setAnchorPosition(DeviceIdentifier, Vector3ToDoubleArray(CurrentPosition));
         //Debug.Log("AnchorPos:" + anPos);
